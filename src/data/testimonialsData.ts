@@ -1,0 +1,133 @@
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: "Volunteer" | "Student" | "Beneficiary" | "Organizer";
+  location: string;
+  event: string;
+  review: string;
+  rating: number;
+  date: string;
+  image: string;
+  bgColor: string;   // Tailwind class (kept for backward compatibility)
+  hexColor: string;  // Hex value for inline styles
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "meenakshi",
+    name: "Meenakshi Sundaram",
+    role: "Organizer",
+    location: "Mylapore, Chennai",
+    event: "Heritage Area Cleanliness",
+    review: "Organizing waste segregation near the historical temple tank helped us educate shopkeepers and visitors alike. Preserving our heritage starts with maintaining cleanliness.",
+    rating: 5,
+    date: "Nov 20, 2025",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#FFDCD3]",
+    hexColor: "#FFDCD3",
+  },
+  {
+    id: "rajesh",
+    name: "Rajesh Kumar",
+    role: "Organizer",
+    location: "Guindy, Chennai",
+    event: "Academic Aid Program",
+    review: "Seeing young children receive comprehensive learning kits and start their academic year with smiles reminded us why community service matters. It's about bridging the educational gap.",
+    rating: 5,
+    date: "Feb 05, 2026",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#FFE4E1]",
+    hexColor: "#FFE4E1",
+  },
+  {
+    id: "divya",
+    name: "Divya Swaminathan",
+    role: "Volunteer",
+    location: "Besant Nagar, Chennai",
+    event: "Beach Cleaning Campaign",
+    review: "Participating in the beach cleanup campaign at Elliot's Beach showed me how collective small actions can restore our coastline and create a lasting impact. The energy was electric!",
+    rating: 5,
+    date: "Jan 12, 2026",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#D1FAE5]",
+    hexColor: "#D1FAE5",
+  },
+  {
+    id: "arjun",
+    name: "Arjun Viswanathan",
+    role: "Volunteer",
+    location: "Sholinganallur, Chennai",
+    event: "E-Waste Recycling Hub",
+    review: "We set up convenient electronic waste drop-off bins across the IT corridor. The positive response from tech workers recycling their old gadgets was overwhelming.",
+    rating: 5,
+    date: "May 15, 2026",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#FEF08A]",
+    hexColor: "#FEF08A",
+  },
+  {
+    id: "siddharth",
+    name: "Siddharth Nair",
+    role: "Volunteer",
+    location: "Besant Nagar, Chennai",
+    event: "Marine Conservation Awareness",
+    review: "Conducting street plays and interactive sessions at the beach to educate visitors on reducing plastic usage was incredibly fulfilling. People do listen when engaged creatively.",
+    rating: 5,
+    date: "Jan 18, 2026",
+    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#CFFAFE]",
+    hexColor: "#CFFAFE",
+  },
+  {
+    id: "sneha",
+    name: "Sneha Chandrasekhar",
+    role: "Student",
+    location: "Tharamani, Chennai",
+    event: "Stationery Distribution Drive",
+    review: "The stationery drive helped me continue my school education with high confidence. I got brand new notebooks, pens, and pencils that made drawing my favorite birds possible.",
+    rating: 5,
+    date: "Mar 18, 2026",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#C2F0C2]",
+    hexColor: "#C2F0C2",
+  },
+  {
+    id: "kaviya",
+    name: "Kaviya Selvam",
+    role: "Student",
+    location: "Tambaram, Chennai",
+    event: "Scholarship Mentorship",
+    review: "With the help of senior volunteers, I prepared for my higher secondary exams and secured admission into engineering. I hope to give back to this community someday.",
+    rating: 5,
+    date: "Jun 02, 2026",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#E9D5FF]",
+    hexColor: "#E9D5FF",
+  },
+  {
+    id: "raghavan",
+    name: "Dr. K. Raghavan",
+    role: "Volunteer",
+    location: "Adyar, Chennai",
+    event: "Digital Literacy Initiative",
+    review: "Setting up computer labs and mentoring municipal school students in basic programming was an eye-opener. These kids are incredibly quick learners and just need opportunity.",
+    rating: 5,
+    date: "May 10, 2026",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#FDE6D2]",
+    hexColor: "#FDE6D2",
+  },
+  {
+    id: "anitha",
+    name: "Anitha Balaji",
+    role: "Beneficiary",
+    location: "Velachery, Chennai",
+    event: "Child Rights Advocacy",
+    review: "Learning about local sanitation and child education rights empowered our street council to organize and demand better local facilities. The change is real and visible.",
+    rating: 5,
+    date: "Apr 22, 2026",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200",
+    bgColor: "bg-[#BFDBFE]",
+    hexColor: "#BFDBFE",
+  },
+];
