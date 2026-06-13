@@ -1,0 +1,6 @@
+{
+  "name": "Chennai Impact Map",
+  "description": "An interactive impact map visualizing community initiatives, food drives, educational programs, and other social welfare campaigns across Chennai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
