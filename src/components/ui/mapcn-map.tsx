@@ -513,7 +513,11 @@ function MapControls({
   const handleFullscreen = useCallback(() => {
     const c = map?.getContainer();
     if (!c) return;
-    document.fullscreenElement ? document.exitFullscreen() : c.requestFullscreen();
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      c.requestFullscreen();
+    }
   }, [map]);
 
   const handleLocate = useCallback(() => {
@@ -973,7 +977,7 @@ function MapClusterLayer<P extends GeoJSON.GeoJsonProperties = GeoJSON.GeoJsonPr
     const handlePointClick = (e: MapLibreGL.MapMouseEvent) => {
       const features = map.queryRenderedFeatures(e.point, { layers: [unclusteredId] });
       if (!features.length) return;
-      const feature = features[0] as GeoJSON.Feature<GeoJSON.Point, P>;
+      const feature = features[0] as unknown as GeoJSON.Feature<GeoJSON.Point, P>;
       const coordinates = feature.geometry.coordinates as [number, number];
       onPointClick?.(feature, coordinates);
     };
