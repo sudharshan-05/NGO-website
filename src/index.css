@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;500;600;700;800;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-condensed: "Bebas Neue", "Oswald", sans-serif;
+  --font-gondem: "Bebas Neue", "Oswald", sans-serif;
+  --font-typewriter: "Special Elite", "Courier Prime", "Courier New", monospace;
+  --font-citadel: "Cinzel", "Playfair Display", Georgia, serif;
+
+  /* NGO Website Color Palette */
+  --color-primary-forest: #2E7D32;
+  --color-secondary-gold: #F4B400;
+  --color-accent-blue: #4285F4;
+  --color-supporting-light: #C8E6C9;
+  --color-bg-ivory: #FAFAF5;
+  --color-text-charcoal: #1F2937;
+}
+
+/* Custom fade-in and blinking animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Customized scrollbar for interactive look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111411;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c271e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3d2e;
+}

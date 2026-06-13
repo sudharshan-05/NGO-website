@@ -1,0 +1,6 @@
+{
+  "name": "Leo Club of Mavericks",
+  "description": "The official landing page for Leo Club of Mavericks District 324 E, featuring an interactive hero section, membership join flows, and donation portals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
