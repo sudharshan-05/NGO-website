@@ -1,20 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# NGO Connect
 
-# Run and deploy your AI Studio app
+A modern NGO website designed to connect volunteers, donors, and communities.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/3fada52b-9832-4d4f-a2b8-f504c2f85543
+* Interactive Chennai Impact Map
+* Volunteer Registration
+* Donation Support
+* Event Gallery
+* Project Showcase
+* Contact Section
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+* React
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* Vite
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the project:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+## License
+
+This project is developed for educational and social impact purposes.
