@@ -1,0 +1,1 @@
+export { ImpactMapSection } from "./ImpactMapSection";

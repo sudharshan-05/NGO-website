@@ -1,8 +1,29 @@
+# dependencies
 node_modules/
+package-lock.json
+
+# next.js
+.next/
+out/
 build/
+
+# production
 dist/
-coverage/
+
+# misc
 .DS_Store
-*.log
-.env*
-!.env.example
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
