@@ -85,14 +85,14 @@ export function HeroSection() {
       </div>
 
       {/* ── Content ─────────────────────────────────────────────────────────── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-32 pb-20 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-40 pb-24flex flex-col items-center text-center">
 
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-2 mb-8"
+          className="inline-flex items-center gap-2 mb-10"
         >
           <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[11px] font-inter font-semibold tracking-[0.28em] uppercase px-5 py-2 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-[#F4B400] animate-pulse" aria-hidden="true" />
@@ -105,7 +105,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="font-gondens text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] text-white leading-[1.0] mb-6 max-w-5xl"
+         className="font-gondens text-6xl sm:text-7xl md:text-8xl lg:text-[7rem] text-white leading-[0.95] mb-6 max-w-6xl"
         >
           <span className="block">Creating Impact</span>
           <span className="block text-[#F4B400]">Across Chennai</span>
@@ -116,7 +116,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="font-citadel text-xl md:text-2xl text-white/75 leading-relaxed max-w-2xl mb-10"
+          className="font-citadel text-xl md:text-2xl text-white/75 leading-relaxed max-w-3xl mb-10"
         >
           Empowering young leaders to serve, grow and transform communities — one initiative at a time.
         </motion.p>
