@@ -120,6 +120,32 @@
   scrollbar-width: none;
 }
 
+/* ── Typewriter Animation ────────────────────────────────────────────── */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #F4B400;
+  width: fit-content;
+  animation:
+    typing 3s steps(30, end) forwards,
+    blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
