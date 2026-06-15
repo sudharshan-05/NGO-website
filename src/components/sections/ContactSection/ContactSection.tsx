@@ -24,17 +24,20 @@ export function ContactSection() {
     >
 
       <Container className="relative z-10">
-        <SectionTitle
-          dark
-          eyebrow=""
-          title={
-            <>
-              Join the <span className="text-[#F4B400]">Movement</span>
-            </>
-          }
-          subtitle="Whether you want to volunteer, partner or donate — we'd love to hear from you."
-          className="text-center [&_span]:text-[#C8E6C9]/80 [&_span]:border-[#2E7D32]/40 [&_span]:bg-[#2E7D32]/15"
-        />
+     <SectionTitle
+  dark
+  eyebrow=""
+  title={
+    <>
+      Join the{" "}
+      <span className="!text-[#F4B400]">
+        Movement
+      </span>
+    </>
+  }
+  subtitle="Whether you want to volunteer, partner or donate — we'd love to hear from you."
+  className="text-center"
+/>
 
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
           {/* Contact info */}

@@ -77,7 +77,7 @@ export function AboutSection() {
               Our Story
             </span>
 
-            <h2 className="font-gondens text-5xl md:text-[3.8rem] text-white leading-[1.3] mb-6">
+            <h2 className="font-gondens text-5xl md:text-[3.8rem] text-white leading-[1.6] mb-6">
               Building Tomorrow&apos;s<br />
               <span className="text-[#F4B400] block mt-2">Leaders Today</span>
             </h2>
@@ -176,11 +176,28 @@ export function AboutSection() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {pillars.map(({ icon: Icon, title, desc, color }) => (
-              <motion.div
-                key={title}
-                variants={staggerItem}
-                className="group bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300"
-              >
+             <motion.div
+  key={title}
+  variants={staggerItem}
+ className="
+relative overflow-hidden
+group
+bg-white
+rounded-3xl
+p-8
+border border-gray-100
+shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)]
+hover:-translate-y-3
+hover:rotate-x-2
+transition-all
+duration-500
+"
+>
+  <Icon
+  className="absolute right-4 bottom-4 w-24 h-24 opacity-[0.03]"
+  aria-hidden="true"
+/>
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"
                   style={{

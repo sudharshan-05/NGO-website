@@ -88,6 +88,12 @@ export function ImpactMapSection() {
                         boxShadow: `0 0 0 ${isActive ? 4 : 2}px ${cat.color}40`,
                       }}
                     >
+                      {isActive && (
+  <span
+    className="absolute inset-0 rounded-full animate-ping"
+    style={{ backgroundColor: `${cat.color}40` }}
+  />
+)}
                       <div className="w-full h-full rounded-full overflow-hidden border-[2.5px] border-white bg-white relative">
                         <Image
                           src={item.image}
@@ -137,6 +143,26 @@ export function ImpactMapSection() {
               </ul>
             </div>
           </motion.div>
+          {/* Impact Stats */}
+<div className="absolute top-4 right-4 bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl border border-gray-100 hidden md:block">
+  <div className="space-y-3">
+    <div>
+      <p className="font-gondens text-3xl text-[#2E7D32]">48+</p>
+      <p className="text-[10px] font-inter uppercase tracking-widest text-[#1F2937]/50">
+        Projects
+      </p>
+    </div>
+
+    <div className="w-full h-px bg-gray-200" />
+
+    <div>
+      <p className="font-gondens text-3xl text-[#F4B400]">12K+</p>
+      <p className="text-[10px] font-inter uppercase tracking-widest text-[#1F2937]/50">
+        Lives Impacted
+      </p>
+    </div>
+  </div>
+</div>
 
           {/* Detail card */}
           <motion.div
@@ -161,12 +187,14 @@ export function ImpactMapSection() {
                     alt={active.name}
                     fill
                     sizes="(max-width: 1024px) 100vw, 480px"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-6 right-6">
                     <Badge variant="gold">{active.campaign}</Badge>
-                    <h3 className="font-citadel text-2xl text-white mt-2">{active.name}</h3>
+                   <h3 className="font-inter font-bold text-3xl tracking-tight text-white mt-2 drop-shadow-sm">
+                    {active.name}
+                    </h3>
                   </div>
                 </div>
 
@@ -222,7 +250,23 @@ function Stat({
         <Icon className="w-4 h-4 text-[#2E7D32]" aria-hidden="true" />
         <p className="text-[10px] font-inter uppercase tracking-widest text-[#1F2937]/45">{label}</p>
       </div>
-      <p className="font-gondens text-2xl text-[#2E7D32]">{value}</p>
+    {label === "Date" ? (
+  <div className="text-[#2E7D32]">
+    <span className="font-inter text-lg uppercase">
+      {value.split(" ")[0]}
+    </span>{" "}
+    <span className="font-gondens text-1xl">
+      {value.split(" ")[1]?.replace(",", "")}
+    </span>
+    <span className="font-inter text-lg">
+      , {value.split(" ")[2]}
+    </span>
+  </div>
+) : (
+  <p className="font-gondens text-2xl text-[#2E7D32]">
+    {value}
+  </p>
+)}
     </div>
   );
 }
