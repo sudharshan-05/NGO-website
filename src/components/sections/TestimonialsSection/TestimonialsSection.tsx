@@ -190,7 +190,7 @@ export function TestimonialsSection() {
           {/* Heading */}
           <motion.h2
             initial={{opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:0.6,delay:0.1}}
-            className="font-gondens text-[3.4rem] md:text-[4.4rem] text-[#1F2937] mb-5 leading-[1.0] w-full"
+            className="font-gondens text-[3.4rem] md:text-[4.4rem] text-[#1F2937] mb-10 leading-[1.0] w-full"
           >
             Voices of Impact
           </motion.h2>
@@ -198,7 +198,7 @@ export function TestimonialsSection() {
           {/* Subtitle */}
           <motion.p
             initial={{opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:0.6,delay:0.2}}
-            className="font-citadel text-xl md:text-[1.5rem] text-[#1F2937]/60 leading-relaxed w-full"
+            className="font-inter text-xl md:text-[1.5rem] text-[#1F2937]/60 leading-relaxed w-full"
           >
             Stories from volunteers, students &amp; communities whose lives have been transformed.
           </motion.p>
@@ -379,7 +379,7 @@ export function TestimonialsSection() {
                       from-black/70 via-black/10 to-transparent"/>
                     {/* Name + location overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <h3 className="font-citadel text-white text-[1.75rem] italic
+                      <h3 className="font-inter text-white text-[1.75rem] font-semibold
                         leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
                         {activeItem.name}
                       </h3>
@@ -490,7 +490,7 @@ export function TestimonialsSection() {
                     fill sizes="340px" className="object-cover object-top" priority/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"/>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="font-citadel text-white text-xl italic drop-shadow-lg">
+                    <h3 className="font-inter text-white text-xl font-semibold drop-shadow-lg">
                       {activeItem.name}
                     </h3>
                     <div className="flex items-center gap-1 mt-1">

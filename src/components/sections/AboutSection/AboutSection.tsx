@@ -158,9 +158,9 @@ export function AboutSection() {
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="text-center mb-14"
+            className="text-center mb-28"
           >
-            <h2 className="font-gondens text-4xl md:text-5xl text-[#1F2937] leading-[1.05] mb-4">
+            <h2 className="font-gondens text-4xl md:text-5xl text-[#1F2937] leading-[1.05] mb-10">
               What Drives Us
             </h2>
             <p className="font-inter text-base text-[#1F2937]/55 max-w-xl mx-auto">
@@ -190,7 +190,7 @@ export function AboutSection() {
                 >
                   <Icon className="w-6 h-6" style={{ color }} aria-hidden="true" />
                 </div>
-                <h3 className="font-citadel text-2xl text-[#1F2937] mb-3">{title}</h3>
+                <h3 className="font-inter text-2xl font-semibold text-[#1F2937] mb-3">{title}</h3>
                 <p className="font-inter text-sm text-[#1F2937]/55 leading-[1.85]">{desc}</p>
               </motion.div>
             ))}
@@ -203,21 +203,21 @@ export function AboutSection() {
         className="w-full py-16"
         style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #fafaf5 50%, #eff6ff 100%)" }}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
 
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
+            className="text-center mb-12"
           >
             <h2 className="font-gondens text-4xl text-[#1F2937] leading-[1.1] mb-4">
               Our Areas of <span className="text-[#2E7D32]">Impact</span>
             </h2>
-            <p className="font-inter text-base text-[#1F2937]/55 leading-relaxed mb-8">
+            <p className="font-inter text-base text-[#1F2937]/55 leading-relaxed mb-8 max-w-xl mx-auto">
               Every initiative is thoughtfully designed to address Chennai&apos;s most pressing community needs — from classroom to coastline.
             </p>
-
             <a
               href="#programs"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-inter font-semibold text-sm text-white bg-[#2E7D32] hover:bg-[#1b5e20] shadow-lg hover:shadow-[0_8px_24px_rgba(46,125,50,0.35)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E7D32]"
@@ -231,20 +231,24 @@ export function AboutSection() {
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="space-y-3"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto"
             aria-label="Impact areas"
           >
             {impactAreas.map((area) => (
               <motion.li
                 key={area}
                 variants={staggerItem}
-                className="flex items-start gap-3 bg-white rounded-2xl px-5 py-4 shadow-md border border-gray-100"
+                className="flex items-start gap-4 bg-white rounded-2xl px-6 py-5 hover:-translate-y-1 transition-all duration-300"
+                style={{
+                  borderLeft: "4px solid #2E7D32",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.07), 0 8px 24px rgba(0,0,0,0.08), 0 2px 0px rgba(46,125,50,0.15), inset 0 1px 0 rgba(255,255,255,0.9)",
+                }}
               >
                 <CheckCircle2
                   className="w-5 h-5 text-[#2E7D32] flex-shrink-0 mt-0.5"
                   aria-hidden="true"
                 />
-                <span className="font-inter text-sm text-[#1F2937]/75 leading-relaxed">{area}</span>
+                <span className="font-inter text-[15px] font-medium text-[#1F2937] leading-relaxed">{area}</span>
               </motion.li>
             ))}
           </motion.ul>

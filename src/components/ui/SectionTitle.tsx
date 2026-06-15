@@ -36,12 +36,13 @@ export function SectionTitle({
         </span>
       )}
 
-      <h2
-        className={cn(
-          "font-gondens text-5xl md:text-6xl lg:text-7xl leading-[0.92] mb-2",
-          dark ? "text-white" : "text-[#1F2937]"
-        )}
-      >
+ <h2
+  className={cn(
+    "font-gondens text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 text-center",
+    dark ? "text-white" : "text-[#1F2937]"
+  )}
+>
+
         {title}
       </h2>
 

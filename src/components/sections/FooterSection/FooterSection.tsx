@@ -141,51 +141,46 @@ export function FooterSection() {
             <div className="flex items-start gap-4 mb-6">
               {/* Icon badge */}
               <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 mt-0.5"
+                className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 mt-0.5"
                 style={{ background: `linear-gradient(135deg, ${GREEN} 0%, #1b5e20 100%)`,
                   boxShadow: `0 8px 24px rgba(46,125,50,0.30)` }}
               >
-                <Heart className="w-6 h-6 text-white fill-white" />
+                <Heart className="w-7 h-7 text-white fill-white" />
               </div>
 
               {/* Brand text block */}
-              <div className="flex flex-col gap-0">
-                {/* Sub-label */}
-                <span className="text-[9px] font-mono font-bold uppercase tracking-[0.28em] mb-1"
-                  style={{ color: `${GREEN}` }}>
-                  Leo Club
-                </span>
-                {/* Main name */}
-                <span
-                  className="font-gondens text-[2rem] leading-[1.1] tracking-tight text-white"
-                >
-                  Mavericks
-                </span>
-                {/* Thin gold accent line */}
-                <div className="mt-1 h-[2px] w-12 rounded-full"
-                  style={{ background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
-              </div>
+              <div className="flex flex-col">
+  <span
+    className="font-inter text-[11px] font-semibold uppercase tracking-[0.35em]"
+    style={{ color: GREEN }}
+  >
+    LEO CLUB
+  </span>
+
+  <span className="font-inter text-[2rem] font-extrabold text-white leading-none">
+    Mavericks
+  </span>
+</div>
             </div>
 
-
-            <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-xs">
+            <p className="text-base text-white/70 leading-relaxed mb-6 max-w-xs">
               Empowering young leaders to serve, grow, and transform communities
               across Tamil Nadu — one initiative at a time.
             </p>
 
             {/* Contact info */}
-            <div className="space-y-2.5">
+            <div className="space-y-3">
               {[
                 { Icon: MapPin, text: "Chennai, Tamil Nadu, India" },
                 { Icon: Mail,   text: "mavericks@leoclub.org" },
                 { Icon: Phone,  text: "+91 98765 43210" },
               ].map(({ Icon, text }) => (
-                <div key={text} className="flex items-center gap-2.5 group cursor-default">
+                <div key={text} className="flex items-center gap-3 group cursor-default">
                   <Icon
-                    className="w-3.5 h-3.5 flex-shrink-0 transition-colors duration-200"
+                    className="w-4 h-4 flex-shrink-0 transition-colors duration-200"
                     style={{ color: `${GREEN}` }}
                   />
-                  <span className="text-xs text-white/45 group-hover:text-white/70 transition-colors duration-200">
+                  <span className="text-sm text-white/60 group-hover:text-white/80 transition-colors duration-200">
                     {text}
                   </span>
                 </div>
@@ -193,18 +188,18 @@ export function FooterSection() {
             </div>
 
             {/* Social icons */}
-            <div className="flex items-center gap-2.5 mt-7">
+            <div className="flex items-center gap-3 mt-7">
               {socials.map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center
+                  className="w-9 h-9 rounded-lg flex items-center justify-center
                     border border-white/10 bg-white/[0.05]
                     hover:border-white/20 hover:bg-white/[0.12]
                     transition-all duration-200 group"
                 >
-                  <Icon className="w-3.5 h-3.5 text-white/35 group-hover:text-white transition-colors duration-200" />
+                  <Icon className="w-4 h-4 text-white/45 group-hover:text-white transition-colors duration-200" />
                 </a>
               ))}
             </div>
@@ -218,19 +213,21 @@ export function FooterSection() {
                 custom={ci + 1} variants={fadeUp} initial="hidden" whileInView="visible"
                 viewport={{ once: true, margin: "-60px" }}
               >
-                <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] mb-4"
-                  style={{ color: GREEN }}>
+                <p
+                 className="text-[15px] font-inter font-bold uppercase tracking-[0.15em] mb-6"
+                  style={{ color: GREEN }}
+                >
                   {col.label}
                 </p>
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   {col.links.map((link) => (
                     <li key={link.text}>
                       <a
                         href={link.href}
-                        className="text-xs text-white/45 hover:text-white/90 transition-colors duration-200
+                        className="text-sm text-white/55 hover:text-white/90 transition-colors duration-200
                           flex items-center gap-1 group"
                       >
-                        <span className="w-0 overflow-hidden group-hover:w-2.5 transition-all duration-200 opacity-0 group-hover:opacity-100"
+                        <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-200 opacity-0 group-hover:opacity-100"
                           style={{ color: GOLD }}>
                           ›
                         </span>
@@ -249,11 +246,13 @@ export function FooterSection() {
             custom={4} variants={fadeUp} initial="hidden" whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
           >
-            <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] mb-4"
-              style={{ color: GREEN }}>
+            <p
+             className="text-[15px] font-inter font-bold uppercase tracking-[0.15em] mb-6"
+              style={{ color: GREEN }}
+            >
               Stay Updated
             </p>
-            <p className="text-xs text-white/45 leading-relaxed mb-5">
+            <p className="text-sm text-white/60 leading-relaxed mb-5">
               Get impact stories, event invites, and community updates delivered to your inbox.
             </p>
 
@@ -263,13 +262,13 @@ export function FooterSection() {
                 type="email"
                 placeholder="your@email.com"
                 className="w-full bg-white/[0.06] border border-white/10 rounded-xl
-                  px-4 py-2.5 text-xs text-white placeholder-white/25
+                  px-4 py-3 text-sm text-white placeholder-white/30
                   focus:outline-none focus:border-[#2E7D32]/60 focus:bg-white/[0.09]
                   transition-all duration-200"
               />
               <button
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-4
-                  rounded-xl text-xs font-semibold text-white
+                className="w-full flex items-center justify-center gap-2 py-3 px-4
+                  rounded-xl text-sm font-semibold text-white
                   transition-all duration-200 group"
                 style={{ background: `linear-gradient(135deg, ${GREEN} 0%, #1b5e20 100%)` }}
                 onMouseEnter={(e) => {
@@ -282,24 +281,25 @@ export function FooterSection() {
                 }}
               >
                 Subscribe
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
               </button>
             </div>
 
             {/* Association badge */}
-            <div className="mt-6 flex items-center gap-2 p-3 rounded-xl border border-white/[0.07] bg-white/[0.03]">
+            <div className="mt-6 flex items-center gap-3 p-3.5 rounded-xl border border-white/[0.07] bg-white/[0.03]">
               <div
-                className="w-6 h-6 rounded-md flex-shrink-0 flex items-center justify-center"
+                className="w-7 h-7 rounded-md flex-shrink-0 flex items-center justify-center"
                 style={{ background: `rgba(244,180,0,0.15)` }}
               >
-                <ExternalLink className="w-3 h-3" style={{ color: GOLD }} />
+                <ExternalLink className="w-3.5 h-3.5" style={{ color: GOLD }} />
               </div>
               <div>
-                <p className="text-[9px] font-mono uppercase tracking-widest text-white/30">
-                  Affiliated with
+                <p className="text-xs font-inter font-bold uppercase tracking-[0.2em] text-white/50">
+                   Affiliated With
                 </p>
-                <p className="text-[10px] font-semibold text-white/60 leading-tight">
-                  Lions Clubs International
+
+                <p className="text-lg md:text-xl font-bold text-white leading-tight mt-1">
+                    Lions Clubs International
                 </p>
               </div>
             </div>
@@ -312,7 +312,7 @@ export function FooterSection() {
           custom={5} variants={fadeUp} initial="hidden" whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
         >
-          <p className="text-[10px] text-white/25 font-mono tracking-wide">
+          <p className="text-xs text-white/40 font-mono tracking-wide">
             © {new Date().getFullYear()} Leo Club Mavericks · Chennai, India · All rights reserved.
           </p>
 
@@ -321,7 +321,7 @@ export function FooterSection() {
               <a
                 key={item}
                 href="#"
-                className="text-[10px] text-white/25 hover:text-white/60
+                className="text-xs text-white/40 hover:text-white/70
                   font-mono tracking-wide transition-colors duration-200"
               >
                 {item}
@@ -331,12 +331,12 @@ export function FooterSection() {
 
           {/* Made with love */}
           <div className="flex items-center gap-1.5">
-            <span className="text-[10px] text-white/20 font-mono">Made with</span>
+            <span className="text-xs text-white/30 font-mono">Made with</span>
             <Heart
-              className="w-2.5 h-2.5 fill-current"
+              className="w-3 h-3 fill-current"
               style={{ color: `${GREEN}` }}
             />
-            <span className="text-[10px] text-white/20 font-mono">for Chennai</span>
+            <span className="text-xs text-white/30 font-mono">for Chennai</span>
           </div>
         </motion.div>
       </div>
