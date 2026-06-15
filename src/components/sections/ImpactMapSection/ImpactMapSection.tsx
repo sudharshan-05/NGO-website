@@ -30,7 +30,8 @@ export function ImpactMapSection() {
           eyebrow="Our Impact"
           title={
             <>
-              Creating Impact <span className="text-[#2E7D32]">Across Chennai</span>
+              Creating Impact{" "}
+              <span className="text-[#2E7D32]">Across Chennai</span>
             </>
           }
           subtitle="Explore verified community initiatives across six key neighborhoods — hover or tap pins to discover the stories behind each project."

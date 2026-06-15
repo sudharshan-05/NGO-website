@@ -22,23 +22,18 @@ export function ContactSection() {
       style={{ background: "linear-gradient(135deg, #111816 0%, #1a2e1e 50%, #111816 100%)" }}
       aria-label="Contact section"
     >
-      <div
-        className="pointer-events-none absolute top-0 right-1/4 w-96 h-96 rounded-full opacity-20"
-        style={{ background: "radial-gradient(circle, rgba(46,125,50,0.6) 0%, transparent 70%)" }}
-        aria-hidden="true"
-      />
 
       <Container className="relative z-10">
         <SectionTitle
           dark
-          eyebrow="Get In Touch"
+          eyebrow=""
           title={
             <>
               Join the <span className="text-[#F4B400]">Movement</span>
             </>
           }
           subtitle="Whether you want to volunteer, partner or donate — we'd love to hear from you."
-          className="[&_span]:text-[#C8E6C9]/80 [&_span]:border-[#2E7D32]/40 [&_span]:bg-[#2E7D32]/15"
+          className="text-center [&_span]:text-[#C8E6C9]/80 [&_span]:border-[#2E7D32]/40 [&_span]:bg-[#2E7D32]/15"
         />
 
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">

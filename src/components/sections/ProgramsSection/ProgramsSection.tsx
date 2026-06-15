@@ -74,22 +74,22 @@ export function ProgramsSection() {
                       {program.neighborhood}
                     </div>
 
-                    <h3 className="font-citadel text-2xl text-[#1F2937] mb-2">{program.name}</h3>
+                    <h3 className="font-inter text-2xl font-semibold text-[#1F2937] mb-2">{program.name}</h3>
                     <p className="font-inter text-sm text-[#1F2937]/55 leading-relaxed mb-4 flex-1">
                       {program.description}
                     </p>
 
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <div className="flex items-center gap-1.5 text-xs font-inter text-[#1F2937]/50">
-                        <Users className="w-3.5 h-3.5" aria-hidden="true" />
+                      <div className="flex items-center gap-2 text-sm font-inter font-medium text-[#1F2937]/60">
+                        <Users className="w-4 h-4" aria-hidden="true" />
                         {program.peopleHelped.toLocaleString()} {program.peopleHelpedLabel.toLowerCase()}
                       </div>
                       <a
                         href="#impact-map"
-                        className="inline-flex items-center gap-1 text-xs font-inter font-semibold text-[#4285F4] hover:text-[#2E7D32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4285F4] rounded-full px-2 py-1"
+                        className="inline-flex items-center gap-1.5 text-sm font-inter font-semibold text-[#4285F4] hover:text-[#2E7D32] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4285F4] rounded-full px-2 py-1"
                       >
                         View on map
-                        <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                        <ArrowRight className="w-4 h-4" aria-hidden="true" />
                       </a>
                     </div>
                   </div>
