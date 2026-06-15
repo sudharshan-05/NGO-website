@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, MapPin, ChevronLeft, ChevronRight, Quote, Users, Heart, Globe } from "lucide-react";
 import { testimonials, Testimonial } from "@/data/testimonialsData";
+import { Map as MapGL } from "@/components/ui/mapcn-map";
+
 
 // ─── Float positions — 4 left · 4 right ──────────────────────────────────────
 const floatPositions = [
@@ -91,19 +93,78 @@ export function TestimonialsSection() {
       style={{ background: "#FAFAF5", minHeight: "100vh" }}
       aria-label="Voices of Impact testimonials"
     >
-      {/* Background typography — RULES.md §TESTIMONIAL SECTION */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      {/* BACKGROUND MAP & TYPOGRAPHY */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true" style={{ zIndex: 0 }}>
+        {/* MapLibre GL — all interactions disabled */}
+        <div className="absolute inset-0 w-full h-full" style={{ minHeight: "100vh" }}>
+          <MapGL
+            center={[79.65, 13.10]}
+            zoom={9}
+            bearing={0}
+            pitch={0}
+            scrollZoom={false}
+            dragPan={false}
+            dragRotate={false}
+            doubleClickZoom={false}
+            touchZoomRotate={false}
+            keyboard={false}
+            cooperativeGestures={false}
+            theme="light"
+            styles={{
+              light: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+            }}
+            className="w-full h-full"
+          />
+        </div>
+
+        {/* Ivory veil — more transparent so map is visible (55% opacity) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(160deg, rgba(246,250,246,0.58) 0%, rgba(250,250,245,0.52) 50%, rgba(245,245,251,0.58) 100%)",
+          }}
+        />
+
+        {/* Large background typography */}
         <p className="absolute top-[8%] left-1/2 -translate-x-1/2 font-gondens text-[clamp(4rem,14vw,12rem)] text-[#2E7D32] opacity-[0.04] whitespace-nowrap tracking-wider">
           VOICES OF IMPACT
         </p>
         <p className="absolute bottom-[12%] left-1/2 -translate-x-1/2 font-gondens text-[clamp(3rem,10vw,8rem)] text-[#4285F4] opacity-[0.035] whitespace-nowrap tracking-wider">
           EVERY LIFE MATTERS
         </p>
+
+        {/* Dot-grid on top for texture depth */}
         <div
           className="absolute inset-0"
           style={{
-            background:
-              "radial-gradient(circle at 20% 30%, rgba(200,230,201,0.25) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(66,133,244,0.12) 0%, transparent 50%)",
+            backgroundImage: `radial-gradient(circle, rgba(31,41,55,0.08) 1.5px, transparent 1.5px)`,
+            backgroundSize: "48px 48px",
+          }}
+        />
+
+        {/* Soft green glow — top-left */}
+        <div
+          className="absolute"
+          style={{
+            top: "18%",
+            left: "-6%",
+            width: 520,
+            height: 520,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(46,125,50,0.12) 0%, transparent 65%)",
+          }}
+        />
+        {/* Soft blue glow — bottom-right */}
+        <div
+          className="absolute"
+          style={{
+            bottom: "5%",
+            right: "-5%",
+            width: 480,
+            height: 480,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(66,133,244,0.10) 0%, transparent 65%)",
           }}
         />
       </div>
