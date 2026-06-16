@@ -1,12 +1,12 @@
 "use client";
 
-import {defineConfig} from "sanity";
-import {visionTool} from "@sanity/vision";
-import {structureTool} from "sanity/structure";
+import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { visionTool } from "@sanity/vision";
 
-import {projectId, dataset, apiVersion} from "./src/sanity/env";
-import {schemaTypes} from "./src/sanity/schemaTypes";
-import {structure} from "./src/sanity/structure";
+import { projectId, dataset, apiVersion } from "./src/sanity/env";
+import { schemaTypes } from "./src/sanity/schemaTypes";
+import { structure } from "./src/sanity/structure";
 
 export default defineConfig({
   name: "default",
@@ -14,15 +14,16 @@ export default defineConfig({
 
   projectId,
   dataset,
+  apiVersion,
 
   basePath: "/studio",
 
   plugins: [
-    structureTool({structure}),
-    visionTool({defaultApiVersion: apiVersion}),
-np  ],
+    structureTool({ structure }),
+    visionTool({ defaultApiVersion: apiVersion }),
+  ],
 
   schema: {
     types: schemaTypes,
-  }
+  },
 });
